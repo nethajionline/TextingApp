@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/secound"
+    tools:context="com.example.karthikeyan.fingerprintcheck.Main2Activity">
+
+
+    <TextView
+        android:id="@+id/textViewTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TO  "
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="16sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/msgText" />
+
+    <EditText
+        android:id="@+id/numberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/textViewTo"
+        android:inputType="phone"
+        android:textColor="@android:color/holo_purple" />
+
+    <EditText
+        android:id="@+id/msgText"
+        android:layout_width="wrap_content"
+        android:layout_height="250sp"
+        android:backgroundTintMode="screen"
+        android:capitalize="words"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="12sp"
+        android:layout_below="@+id/numberText"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/eButton" />
+
+    <Button
+        android:id="@+id/eButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/numberText"
+        android:layout_marginTop="80dp"
+        android:onClick="OnEncrypt"
+        android:text="Encrypt"
+        tools:clickable="true" />
+
+    <Button
+        android:id="@+id/sButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/msgText"
+        android:layout_alignParentEnd="true"
+        android:onClick="OnSendClick1"
+        android:text="Send" />
+
+    <Button
+        android:id="@+id/authBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sButton"
+        android:layout_alignParentEnd="true"
+        android:onClick="OnDecrypt"
+        android:text="See Text" />
+
+    <ImageButton
+        android:id="@+id/contactAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:onClick="OncontactsAdd"
+        android:backgroundTint="@android:color/holo_blue_light"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <Button
+        android:id="@+id/fileAttach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contactAdd"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/msgText"
+        android:text="File" />
+
+    <ImageView
+        android:id="@+id/selectFile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/msgText"
+        android:src="@drawable/image" />
+
+
+</RelativeLayout>
+

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/random"
+    tools:context=".MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:layout_alignTop="@+id/fingerPrint"
+        android:layout_alignParentStart="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="13dp"
+        android:clickable="true"
+        android:onClick="OnSendClick"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/sym_action_email" />
+
+    <ImageButton
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@android:drawable/checkbox_off_background" />
+
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/delete"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:id="@+id/fingerPrint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_toEndOf="@+id/delete"
+        app:srcCompat="?android:attr/fingerprintAuthDrawable" />
+
+    <!--TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Messages "
+        android:textColor="#ff87ff09"
+        android:textSize="30dp"
+        android:layout_alignBottom="@+id/switch1"
+        android:layout_toStartOf="@+id/switch1"
+        android:layout_marginEnd="24dp" /-->
+
+    <TextView
+        android:id="@+id/fingerStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/toolbar"
+        android:text="  Welcome    "
+        android:textSize="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:id="@+id/audioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/presence_audio_online"
+        android:layout_alignTop="@+id/toolbar"
+        android:layout_toEndOf="@+id/fingerPrint" />
+
+    <ImageButton
+        android:id="@+id/donateDollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnDonate"
+        android:layout_below="@+id/floatingActionButton"
+        android:layout_alignStart="@+id/floatingActionButton"
+        android:layout_alignTop="@+id/toolbar"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <ListView
+        android:id="@+id/listMessages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/delete"
+        android:layout_above="@+id/toolbar" />
+
+
+    <EditText
+        android:id="@+id/input_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/listMessages"
+        android:layout_toStartOf="@id/switch1"
+        android:layout_toEndOf="@id/delete"
+        android:hint="Search Contents"
+        android:textSize="18dp" />
+
+
+
+
+</RelativeLayout>

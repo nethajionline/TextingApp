@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/secound"
+    android:gravity="bottom"
+    android:orientation="horizontal">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/msgArea"
+        android:layout_weight="1"
+        android:textColorHint="#CFD8DC"
+        android:textColor="#CFD8DC"
+        android:hint="Write a message" />
+
+    <ImageButton
+        android:id="@+id/compose"
+        android:layout_width="73dp"
+        android:layout_height="wrap_content"
+        android:onClick="onCompose"
+        android:layout_marginTop="@android:dimen/app_icon_size"
+        android:background="@android:color/holo_orange_dark"
+        app:srcCompat="@android:drawable/ic_menu_send" />
+
+</LinearLayout>
